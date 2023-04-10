@@ -185,7 +185,7 @@ if __name__ == '__main__':
 				frames.append(data)
 				current_time = time.time()
 
-					
+				# Next sentence
 				if keyboard.is_pressed(45):
 					while keyboard.is_pressed(45):
 						time.sleep(0.1)
@@ -208,17 +208,21 @@ if __name__ == '__main__':
 					
 					i += 1
 					break
+				# Discard and skip
 				elif keyboard.is_pressed(1):
 					while keyboard.is_pressed(1):
 						time.sleep(0.1)				
 					i += 1
 					stream.close()
+					
 					break
+				# Discard and repeat
 				elif keyboard.is_pressed(2):
 					while keyboard.is_pressed(2):
 						time.sleep(0.1)			
 					stream.close()
 					break
+				# Exit
 				elif keyboard.is_pressed(14):
 					while keyboard.is_pressed(14):
 						time.sleep(0.1)
