@@ -53,7 +53,10 @@ def normlize_text(text, lang, nlp, clean = False):
 					#new_token = num2words(token.text, lang=lang, to = 'ordinal')
 					new_token = token
 				else:
-					new_token = num2words(token.text, lang=lang, to = 'ordinal')
+					try:
+						new_token = num2words(token.text, lang=lang)
+					except Exception:
+						new_token = token.text
 			except NotImplementedError:
 				print("Warning, language %s not supported for text normalization." % lang)
 				new_token = token.text

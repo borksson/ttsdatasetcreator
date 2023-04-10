@@ -146,6 +146,8 @@ if __name__ == '__main__':
 	# 1.1 Hit Space to skip to save+next, hit backspace to discard
 	console.print("[green]n[/green] = next sentence, [yellow]d[/yellow] = discard and repeat last recording, [red]e[/red] = exit recording.")
 	
+	project_folder = project_folder+"wavs/"
+
 	console.print("Ready?", style="green")
 	input("Press Enter to start")
 	
@@ -184,8 +186,8 @@ if __name__ == '__main__':
 				current_time = time.time()
 
 					
-				if keyboard.is_pressed('n'):
-					while keyboard.is_pressed('n'):
+				if keyboard.is_pressed(45):
+					while keyboard.is_pressed(45):
 						time.sleep(0.1)
 		
 					# Write the wav file
@@ -206,19 +208,19 @@ if __name__ == '__main__':
 					
 					i += 1
 					break
-				elif keyboard.is_pressed("s"):
-					while keyboard.is_pressed('s'):
+				elif keyboard.is_pressed(1):
+					while keyboard.is_pressed(1):
 						time.sleep(0.1)				
 					i += 1
 					stream.close()
 					break
-				elif keyboard.is_pressed("d"):
-					while keyboard.is_pressed('d'):
+				elif keyboard.is_pressed(2):
+					while keyboard.is_pressed(2):
 						time.sleep(0.1)			
 					stream.close()
 					break
-				elif keyboard.is_pressed("e"):
-					while keyboard.is_pressed('e'):
+				elif keyboard.is_pressed(14):
+					while keyboard.is_pressed(14):
 						time.sleep(0.1)
 					stream.close()
 					cancelled = True
