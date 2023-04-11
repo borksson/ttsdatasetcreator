@@ -56,7 +56,7 @@ if __name__ == '__main__':
     if not os.path.exists(os.path.join(app_folder, 'zips')):
         os.mkdir(os.path.join(app_folder, 'zips'))
 
-    os.system("zip -r %s %s" % (os.path.join(app_folder, 'zips', project_name + '.zip'), os.path.join(project_folder, 'tmp')))
+    os.system("zip -r %s %s" % (os.path.join(app_folder, 'zips', project_name + '.zip'), os.path.join('tmp')))
     
     console.print("Cleaning tmp folder")
 

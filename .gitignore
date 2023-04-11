@@ -132,3 +132,5 @@ texts/
 zips/
 project_*
 sample_*
+
+.DS_Store
