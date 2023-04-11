@@ -60,6 +60,6 @@ if __name__ == '__main__':
     
     console.print("Cleaning tmp folder")
 
-    os.system("rm -r %s" % os.path.join(project_folder, 'tmp'))
+    #os.system("rm -r %s" % os.path.join(project_folder, 'tmp'))
 
     console.print("Done")

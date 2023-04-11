@@ -18,6 +18,8 @@ import sys
 
 from datetime import datetime, timedelta
 
+from num2words import num2words
+
 replacement_map = {
 	'«': '"',
 	'»': '"',
@@ -123,7 +125,7 @@ if __name__ == '__main__':
 		sentence = sentence.replace("\t", " ")
 		
 		# clean text
-		cleansed_sentence = sentence
+		cleansed_sentence = re.sub(r"(\d+)", lambda x: num2words(int(x.group(0))), sentence)
 		
 		for character, replacement in replacement_map.items():
 			cleansed_sentence = cleansed_sentence.replace(character, replacement)
